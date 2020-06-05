@@ -40,7 +40,7 @@ export default {
       modules: true,
       use: ['sass'],
     }),
-    babel({ exclude: 'node_modules/**' }),
+    babel({ exclude: 'node_modules/**' , babelHelpers: 'bundled'}),
     commonjs()
   ],
   external: ['react', 'react-dom'],
