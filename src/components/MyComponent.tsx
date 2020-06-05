@@ -1,9 +1,14 @@
-import * as React from 'react'
+import React from 'react'
+import styles from './MyComponent.scss'
 
 interface MyComponentProps {
-  name: string
+    name: string
 }
 
-export const MyComponent: React.FC<MyComponentProps> = ({ name }) => (
-  <div role='heading' aria-level={1}>My First Component: {name}</div>
-)
+export const MyComponent: React.FC<MyComponentProps> = ({name}) => {
+    return (
+        <div className={styles.demo}>
+            My First Component: {name}
+        </div>
+    )
+}
